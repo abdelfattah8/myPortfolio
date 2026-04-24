@@ -1,4 +1,3 @@
-
 // ── Custom Cursor ──
 const cursor = document.getElementById('cursor');
 const ring   = document.getElementById('cursorRing');
