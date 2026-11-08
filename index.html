@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abdelfattah Gamal — Frontend Developer</title>
+<title>Abdelfattah Gamal — Software Developer | Odoo ERP & Frontend</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -541,6 +541,91 @@ section { padding: 100px 0; }
 .tag-css { color: #60d9fa; border-color: rgba(96,217,250,0.3); background: rgba(96,217,250,0.06); }
 .tag-bs  { color: #7c3aed; border-color: rgba(124,58,237,0.3); background: rgba(124,58,237,0.06); }
 .tag-html { color: #e44d26; border-color: rgba(228,77,38,0.3); background: rgba(228,77,38,0.06); }
+.tag-py  { color: #3b82f6; border-color: rgba(59,130,246,0.3); background: rgba(59,130,246,0.06); }
+.tag-fb  { color: #f59e0b; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.06); }
+.tag-odoo { color: #10b981; border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.06); }
+.tag-react { color: #61dafb; border-color: rgba(97,218,251,0.3); background: rgba(97,218,251,0.06); }
+
+/* ═══════════════════════════════════════
+   EXPERIENCE
+═══════════════════════════════════════ */
+#experience { background: var(--bg2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+.exp-timeline { margin-top: 56px; display: flex; flex-direction: column; gap: 0; position: relative; }
+.exp-timeline::before {
+  content: '';
+  position: absolute;
+  left: 11px; top: 8px; bottom: 8px;
+  width: 1px;
+  background: var(--line);
+}
+
+.exp-item { display: flex; gap: 32px; padding-bottom: 48px; position: relative; }
+.exp-item:last-child { padding-bottom: 0; }
+
+.exp-dot-wrap { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+.exp-dot {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: var(--bg2);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.exp-dot-inner { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.exp-dot.dimmed { border-color: var(--gray2); }
+.exp-dot.dimmed .exp-dot-inner { background: var(--gray2); }
+
+.exp-card {
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px 28px;
+  flex: 1;
+  transition: border-color 0.3s;
+}
+.exp-card:hover { border-color: rgba(232,255,71,0.2); }
+
+.exp-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 6px; }
+.exp-role { font-family: var(--font-d); font-size: 1.3rem; letter-spacing: 1px; color: var(--white); }
+.exp-period {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(232,255,71,0.08);
+  border: 1px solid rgba(232,255,71,0.2);
+  padding: 4px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.exp-period.past { color: var(--gray); background: transparent; border-color: var(--line); }
+
+.exp-company { font-size: .88rem; color: var(--accent2); font-weight: 500; margin-bottom: 4px; }
+.exp-location { font-size: .78rem; color: var(--gray); margin-bottom: 16px; }
+
+.exp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+
+.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.exp-bullets li {
+  font-size: .88rem;
+  color: var(--gray);
+  line-height: 1.6;
+  font-weight: 300;
+  padding-left: 16px;
+  position: relative;
+}
+.exp-bullets li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: .8rem;
+}
+.exp-bullets li strong { color: var(--white); font-weight: 500; }
 
 .project-num {
   font-family: var(--font-d);
@@ -998,6 +1083,7 @@ footer {
     </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -1024,10 +1110,10 @@ footer {
         <span class="stroke-word">DEVELOPER</span>
       </h1>
       <p class="hero-desc">
-        <strong>Frontend Developer</strong> based in Cairo, Egypt.
-        Building fast, responsive, and interactive web experiences
-        with <strong>JavaScript, React & Tailwind CSS</strong>.
-        Currently expanding into full-stack with <strong>Node.js</strong>.
+        <strong>Software Developer</strong> at <strong>TechlandBS</strong>, Cairo — building
+        <strong>Odoo ERP custom modules</strong> (Python, XML, QWeb) and
+        <strong>React / Vite frontends</strong>. Also designed and shipped
+        <strong>Melted Egypt</strong>, a full-stack e-commerce platform (React + Firebase + Playwright + Vercel), live at meltedegypt.vip.
       </p>
       <div class="hero-btns">
         <a href="#projects" class="btn-primary-hero">
@@ -1043,30 +1129,30 @@ footer {
       <div class="hero-card">
         <p class="hero-card-title">Tech Stack</p>
         <div class="skill-chips">
-          <span class="chip hl">JavaScript</span>
           <span class="chip hl">React</span>
-          <span class="chip">TypeScript</span>
-          <span class="chip hl">Tailwind CSS</span>
-          <span class="chip">Next.js</span>
+          <span class="chip hl">Python</span>
+          <span class="chip hl">Odoo ERP</span>
+          <span class="chip hl">Firebase</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Playwright</span>
+          <span class="chip">Vercel CI/CD</span>
           <span class="chip">Bootstrap</span>
           <span class="chip">HTML5</span>
           <span class="chip">CSS3</span>
           <span class="chip">Git</span>
-          <span class="chip">REST APIs</span>
-          <span class="chip">Node.js</span>
         </div>
         <div class="hero-stats">
           <div class="stat-item">
-            <div class="stat-num">5+</div>
+            <div class="stat-num">1+</div>
+            <div class="stat-label">Yr Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">8+</div>
             <div class="stat-label">Projects</div>
           </div>
           <div class="stat-item">
-            <div class="stat-num">A+</div>
-            <div class="stat-label">Grad Grade</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">4</div>
-            <div class="stat-label">Certs</div>
+            <div class="stat-num">2</div>
+            <div class="stat-label">Live Sites</div>
           </div>
         </div>
       </div>
@@ -1090,23 +1176,51 @@ footer {
 
     <div class="projects-grid">
 
-      <!-- Featured: Forkify -->
+      <!-- Featured: Melted Egypt -->
       <div class="project-card featured reveal">
         <div class="project-img">
-          <div class="project-img-inner">
-            🍴
+          <div class="project-img-inner" style="font-size:3.5rem; flex-direction:column; gap:8px;">
+            🧁
             <div class="code-window">
               <div class="code-dots"><span></span><span></span><span></span></div>
               <div class="code-line c1"></div>
-              <div class="code-line c2"></div>
               <div class="code-line c3"></div>
-              <div class="code-line c4"></div>
+              <div class="code-line c2"></div>
               <div class="code-line c5"></div>
+              <div class="code-line c4"></div>
             </div>
           </div>
         </div>
         <div class="project-body">
-          <div class="project-num">01 — Featured</div>
+          <div class="project-num">01 — Freelance · Live</div>
+          <div class="project-tags">
+            <span class="project-tag tag-react">React</span>
+            <span class="project-tag tag-fb">Firebase</span>
+            <span class="project-tag tag-api">Playwright</span>
+            <span class="project-tag tag-bs">Vercel CI/CD</span>
+          </div>
+          <h3 class="project-name">Melted Egypt — E-Commerce Store</h3>
+          <p class="project-desc">
+            Full-stack e-commerce web app for a handcrafted-desserts business — solo developer, owned the entire stack.
+            Serverless Firebase backend with <strong>role-based security rules</strong> and <strong>server-side price/discount re-validation</strong> against tampering.
+            Promotions engine (promo codes, BOGO, box-gift offers), multi-method checkout (COD, InstaPay, Vodafone Cash), full admin dashboard,
+            and an <strong>automated Playwright E2E test suite</strong> that caught a live pricing bug pre-launch.
+            Deployed via GitHub→Vercel CI/CD with custom domain, DNS, SSL.
+          </p>
+          <div class="project-links">
+            <a href="https://meltedegypt.vip" target="_blank" class="project-link link-live">Live Site ↗</a>
+            <a href="https://github.com/abdelfattah8" target="_blank" class="project-link link-code">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Forkify -->
+      <div class="project-card reveal">
+        <div class="project-img">
+          <div class="project-img-inner" style="font-size:3rem;">🍴</div>
+        </div>
+        <div class="project-body">
+          <div class="project-num">02</div>
           <div class="project-tags">
             <span class="project-tag tag-js">JavaScript</span>
             <span class="project-tag tag-api">REST API</span>
@@ -1114,14 +1228,12 @@ footer {
           </div>
           <h3 class="project-name">Forkify — Recipe Finder</h3>
           <p class="project-desc">
-            A recipe search app consuming a third-party REST API using Fetch & async/await.
-            Features dynamic card rendering, staggered animations, loading states,
-            error handling, Enter-key search, quick-tag filters, and a modal
-            displaying full ingredient lists.
+            Single-page recipe search app consuming the Forkify REST API with Fetch &amp; async/await.
+            Enter-key search, quick-tag filters, full ingredient modal, and custom error/empty-state UI.
           </p>
           <div class="project-links">
             <a href="https://abdelfattah8.github.io/Forkify/" target="_blank" class="project-link link-live">Live Demo ↗</a>
-            <a href="https://github.com/abdelfattah8" target="_blank" class="project-link link-code">GitHub</a>
+            <a href="https://github.com/abdelfattah8/Forkify" target="_blank" class="project-link link-code">GitHub</a>
           </div>
         </div>
       </div>
@@ -1132,7 +1244,7 @@ footer {
           <div class="project-img-inner" style="font-size:3rem;">🗂️</div>
         </div>
         <div class="project-body">
-          <div class="project-num">02</div>
+          <div class="project-num">03</div>
           <div class="project-tags">
             <span class="project-tag tag-js">JavaScript</span>
             <span class="project-tag tag-html">LocalStorage</span>
@@ -1156,7 +1268,7 @@ footer {
           <div class="project-img-inner" style="font-size:3rem;">🎨</div>
         </div>
         <div class="project-body">
-          <div class="project-num">03</div>
+          <div class="project-num">04</div>
           <div class="project-tags">
             <span class="project-tag tag-html">HTML5</span>
             <span class="project-tag tag-css">CSS3</span>
@@ -1180,7 +1292,7 @@ footer {
           <div class="project-img-inner" style="font-size:3rem;">🍽️</div>
         </div>
         <div class="project-body">
-          <div class="project-num">04</div>
+          <div class="project-num">05</div>
           <div class="project-tags">
             <span class="project-tag tag-html">HTML5</span>
             <span class="project-tag tag-css">CSS3</span>
@@ -1202,6 +1314,96 @@ footer {
   </div>
 </section>
 
+<!-- ══ EXPERIENCE ══ -->
+<section id="experience">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Where I've Worked</div>
+      <h2 class="section-title">WORK<br>EXPERIENCE</h2>
+    </div>
+
+    <div class="exp-timeline">
+
+      <!-- TechlandBS Full-time -->
+      <div class="exp-item reveal">
+        <div class="exp-dot-wrap">
+          <div class="exp-dot"><div class="exp-dot-inner"></div></div>
+        </div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-role">Software Developer</div>
+            <span class="exp-period">Mar 2026 — Present</span>
+          </div>
+          <div class="exp-company">TechlandBS</div>
+          <div class="exp-location">Cairo, Egypt · Full-time</div>
+          <div class="exp-tags">
+            <span class="project-tag tag-py">Python</span>
+            <span class="project-tag tag-odoo">Odoo ERP</span>
+            <span class="project-tag tag-react">React / Vite</span>
+            <span class="project-tag tag-api">QWeb / XML</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Developed and deployed custom Odoo modules: <strong>odoo_sale_estimates</strong>, <strong>product_brand</strong>, <strong>sale_brand</strong>, warranty certificates, stock quant pricelist integration, and sale warehouse reposition UI.</li>
+            <li>Implemented XPath view inheritance to extend Odoo views; resolved ParseError and dependency conflicts during module upgrades on <strong>Odoo.sh</strong> CI/CD.</li>
+            <li>Executed cross-version migrations <strong>v18 → v19</strong> and debugged production pipeline issues.</li>
+            <li>Built and maintained the company's React/Vite frontend (<strong>mat-trade-frontend</strong>), coordinating API integration with the Odoo backend.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- TechlandBS Intern -->
+      <div class="exp-item reveal">
+        <div class="exp-dot-wrap">
+          <div class="exp-dot dimmed"><div class="exp-dot-inner"></div></div>
+        </div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-role">Software Developer Intern</div>
+            <span class="exp-period past">Feb 2026 — Mar 2026</span>
+          </div>
+          <div class="exp-company">TechlandBS</div>
+          <div class="exp-location">Cairo, Egypt · Internship</div>
+          <div class="exp-tags">
+            <span class="project-tag tag-py">Python</span>
+            <span class="project-tag tag-odoo">Odoo ERP</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>One-month internship focused on Odoo custom module development and ERP customization.</li>
+            <li>Demonstrated enough technical impact to receive a full-time offer within the month.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Melted Egypt Freelance -->
+      <div class="exp-item reveal">
+        <div class="exp-dot-wrap">
+          <div class="exp-dot dimmed"><div class="exp-dot-inner"></div></div>
+        </div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-role">Full-Stack Developer (Freelance)</div>
+            <span class="exp-period past">Apr 2026</span>
+          </div>
+          <div class="exp-company">Melted Egypt — <a href="https://meltedegypt.vip" target="_blank" style="color:var(--accent2);text-decoration:none;">meltedegypt.vip</a></div>
+          <div class="exp-location">Remote · Solo project</div>
+          <div class="exp-tags">
+            <span class="project-tag tag-react">React</span>
+            <span class="project-tag tag-fb">Firebase</span>
+            <span class="project-tag tag-api">Playwright</span>
+            <span class="project-tag tag-bs">Vercel</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Architected and shipped a complete e-commerce platform solo: storefront, admin dashboard, Firebase backend, security rules, and Playwright test suite.</li>
+            <li>Wrote <strong>server-side price/discount re-validation</strong> to prevent client-side tampering across all order paths.</li>
+            <li>Managed full deployment lifecycle: GitHub→Vercel CI/CD, DNS, SSL, 308 redirects, billing safeguards.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ══ ABOUT ══ -->
 <section id="about">
   <div class="container">
@@ -1211,20 +1413,20 @@ footer {
         <h2 class="section-title">ABOUT<br>ME</h2>
         <div class="about-text" style="margin-top:24px;">
           <p>
-            I'm a <strong>Frontend Developer</strong> with a BSc in Computer Science
-            from <strong>Cairo University</strong>. I specialize in building responsive,
-            high-performance web applications that deliver real value.
+            I'm a <strong>Software Developer</strong> at <strong>TechlandBS</strong>, Cairo,
+            building Odoo ERP custom modules and React frontends in production. I also
+            designed and shipped <strong>Melted Egypt</strong> (meltedegypt.vip) — a full-stack
+            e-commerce platform — solo, end-to-end.
           </p>
           <p>
-            I care deeply about <strong>clean code</strong>, great UX, and
-            writing maintainable solutions. Currently expanding into
-            <strong>Node.js & Express.js</strong> to deliver complete
-            full-stack solutions.
+            I care deeply about <strong>clean code</strong>, security, and maintainability.
+            Comfortable working across the stack: Odoo + Python on the backend,
+            React + Vite on the frontend, Firebase as a serverless database,
+            and Playwright for automated testing.
           </p>
           <p>
-            When I'm not coding, I'm learning something new —
-            whether it's a new framework, a design pattern, or
-            a better way to solve a problem.
+            Currently employed full-time, but always open to interesting problems
+            and bigger challenges.
           </p>
         </div>
         <div class="about-facts">
@@ -1234,11 +1436,11 @@ footer {
           </div>
           <div class="fact">
             <div class="fact-label">Status</div>
-            <div class="fact-value" style="color:var(--accent)">Open to Work ✓</div>
+            <div class="fact-value" style="color:var(--accent)">Employed · Open ✓</div>
           </div>
           <div class="fact">
             <div class="fact-label">Focus</div>
-            <div class="fact-value">Frontend → Full-Stack</div>
+            <div class="fact-value">Odoo ERP + Full-Stack</div>
           </div>
           <div class="fact">
             <div class="fact-label">Email</div>
@@ -1255,12 +1457,21 @@ footer {
           <div class="skill-group-title">Languages</div>
           <div class="skill-list">
             <span class="skill-tag">JavaScript ES6+</span>
-            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Python</span>
             <span class="skill-tag">HTML5</span>
             <span class="skill-tag">CSS3</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">Java</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Odoo / ERP</div>
+          <div class="skill-list">
+            <span class="skill-tag">Custom Modules</span>
+            <span class="skill-tag">QWeb PDF Reports</span>
+            <span class="skill-tag">XPath Inheritance</span>
+            <span class="skill-tag">Odoo.sh CI/CD</span>
+            <span class="skill-tag">v18→v19 Migrations</span>
           </div>
         </div>
 
@@ -1268,30 +1479,21 @@ footer {
           <div class="skill-group-title">Frontend</div>
           <div class="skill-list">
             <span class="skill-tag">React</span>
-            <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">Vite</span>
+            <span class="skill-tag">React Router</span>
             <span class="skill-tag">Bootstrap 5</span>
-            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">CSS Grid / Flexbox</span>
           </div>
         </div>
 
         <div class="skill-group">
-          <div class="skill-group-title">Back-End (Learning)</div>
+          <div class="skill-group-title">Backend & Testing</div>
           <div class="skill-list">
-            <span class="skill-tag learning">Node.js</span>
-            <span class="skill-tag learning">Express.js</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-group-title">Tools & Concepts</div>
-          <div class="skill-list">
-            <span class="skill-tag">Git / GitHub</span>
-            <span class="skill-tag">OOP</span>
-            <span class="skill-tag">Data Structures</span>
-            <span class="skill-tag">Responsive Design</span>
-            <span class="skill-tag">SEO</span>
-            <span class="skill-tag">QA Testing</span>
+            <span class="skill-tag">Firebase (Firestore, Auth, Storage)</span>
+            <span class="skill-tag">NoSQL</span>
+            <span class="skill-tag">Playwright E2E</span>
+            <span class="skill-tag">Vercel CI/CD</span>
+            <span class="skill-tag">DNS & SSL</span>
           </div>
         </div>
       </div>
@@ -1330,13 +1532,6 @@ footer {
             </div>
           </div>
           <div class="cert-item">
-            <div class="cert-dot progress"></div>
-            <div>
-              <div class="cert-name">Full-Stack Roadmap (Node.js)</div>
-              <div class="cert-org">In Progress</div>
-            </div>
-          </div>
-          <div class="cert-item">
             <div class="cert-dot done"></div>
             <div>
               <div class="cert-name">Introduction to Software Testing</div>
@@ -1368,8 +1563,8 @@ footer {
           TOGETHER
         </h2>
         <p style="color:var(--gray); font-size:.9rem; line-height:1.7; margin-bottom:28px; font-weight:300;">
-          I'm currently open to new opportunities.<br>
-          Whether you have a project in mind or just want to chat — my inbox is open.
+          Currently employed at TechlandBS, but open to exciting new challenges.<br>
+          Whether you have a project, a role, or just want to chat — my inbox is open.
         </p>
         <div class="contact-links">
           <a href="mailto:abdelfattahgamal385@gmail.com" class="contact-link">
@@ -1414,7 +1609,7 @@ footer {
 <footer>
   <div class="container footer-inner">
     <a href="#" class="footer-logo">AG<span>.</span></a>
-    <p class="footer-copy">© 2025 Abdelfattah Gamal. Built with HTML, CSS & JS.</p>
+    <p class="footer-copy">© 2026 Abdelfattah Gamal. Built with HTML, CSS & JS.</p>
     <div class="footer-socials">
       <a href="https://github.com/abdelfattah8" target="_blank" class="footer-social" title="GitHub">GH</a>
       <a href="https://www.linkedin.com/in/abdelfattah-gamal-a462b7253/" target="_blank" class="footer-social" title="LinkedIn">in</a>
